@@ -1,0 +1,18 @@
+{
+  "instance": "example-wordpress",
+  "provider": {
+    "adapter": "standard",
+    "transport": "stdio",
+    "command": "python",
+    "args": ["-m", "hermes_maintenance.wordpress", "--site-id", "example", "--path", "/srv/wordpress"]
+  },
+  "max_updates": 2,
+  "sites": [
+    {
+      "id": "example",
+      "plugins": [
+        {"slug": "example-plugin", "from_version": "1.0.0", "target_version": "1.0.1", "active": true}
+      ]
+    }
+  ]
+}

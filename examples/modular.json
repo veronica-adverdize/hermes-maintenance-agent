@@ -1,0 +1,19 @@
+{
+  "instance": "example-modular",
+  "provider": {
+    "adapter": "modular",
+    "transport": "http",
+    "url": "https://mcp.modulards.com/mcp",
+    "token_env": "MODULAR_MCP_ACCESS_TOKEN",
+    "accept_provider_selected_target": false
+  },
+  "max_updates": 2,
+  "sites": [
+    {
+      "id": 100,
+      "plugins": [
+        {"slug": "example-plugin", "item_id": 101, "component_id": 102, "from_version": "1.0.0", "target_version": "1.0.1", "active": true}
+      ]
+    }
+  ]
+}

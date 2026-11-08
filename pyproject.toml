@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-maintenance-agent"
+version = "0.1.0"
+description = "Policy-driven plugin maintenance over MCP"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["mcp>=2,<3", "httpx2"]
+
+[project.scripts]
+hermes-maintenance = "hermes_maintenance.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hermes_maintenance*"]
